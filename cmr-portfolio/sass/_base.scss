@@ -1,0 +1,45 @@
+//color variables
+
+$yellow-dark: rgb(245, 192, 0);
+$yellow-light: rgb(255, 218, 31);
+
+//effect variables
+$shadow-light: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.15);
+$shadow-hover: 0 1.5rem 4.5rem rgba(0, 0, 0, 0.3);
+$shadow-active: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.1);
+
+//website foundation
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end] 1fr
+    );
+  grid-template-rows: repeat(6, minmax(100vh, max-content));
+}
+
+//end website foundation

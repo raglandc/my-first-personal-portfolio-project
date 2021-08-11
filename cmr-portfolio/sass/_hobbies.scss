@@ -1,0 +1,35 @@
+.hobbies {
+  padding: 3rem;
+  grid-column: 3 / 16;
+  grid-row: 5 / 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (min-width: 1100px) {
+    grid-column: 6 / 13;
+  }
+
+  &__header {
+    font-size: 3rem;
+    padding: 2rem 2rem 2rem 0;
+    margin: 3rem 0 1rem 0;
+    border-bottom: 3px solid $yellow-dark;
+  }
+
+  &__text {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+    line-height: 1.5;
+    text-indent: 1rem;
+  }
+
+  &__instructions {
+    background-color: $yellow-dark;
+    width: max-content;
+    margin: 0 auto 3rem auto;
+    font-size: 2rem;
+    padding: 1.618rem;
+  }
+}

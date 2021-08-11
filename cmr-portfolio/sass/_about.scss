@@ -1,0 +1,74 @@
+.about {
+  padding: 3rem;
+  grid-column: 2 / 17;
+  grid-row: 2 / 3;
+
+  justify-self: center;
+  align-self: center;
+
+  @media only screen and (min-width: 600px) {
+    grid-column: 4 / 15;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-template-rows:
+    minmax(0.3fr, max-content) repeat(2, minmax(1fr, max-content))
+    minmax(0.3, min-content);
+
+  align-items: center;
+
+  @media only screen and (min-width: 1300px) {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-rows: minmax(0.3fr, max-content) minmax(1fr, max-content) minmax(
+        0.5,
+        min-content
+      );
+  }
+
+  &__header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-image: linear-gradient(
+      to top right,
+      rgba($yellow-dark, 0.886),
+      rgba($yellow-light, 0.85)
+    );
+    font-size: 3rem;
+    width: max-content;
+    margin: 5rem 0;
+    padding: 2rem 1rem;
+  }
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    border: 0.618rem solid $yellow-dark;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      text-indent: 1rem;
+      padding: 3rem 5rem;
+      line-height: 1.5;
+    }
+
+    &-resume-btn {
+      text-align: center;
+      width: minmax(max-content, 33%);
+      letter-spacing: 5%;
+      text-decoration: none;
+      color: $yellow-dark;
+      padding: 1rem 2rem;
+      font-size: 2.62rem;
+      margin-bottom: 1rem;
+
+      border: 3px solid $yellow-dark;
+
+      &:hover {
+        background-color: $yellow-dark;
+        color: #000;
+      }
+    }
+  }
+}

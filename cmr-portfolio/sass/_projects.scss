@@ -1,0 +1,155 @@
+.projects {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  align-items: center;
+  grid-row-gap: 3rem;
+
+  @media only screen and (min-width: 700px) {
+    grid-column: 3 / 16;
+  }
+
+  display: grid;
+
+  grid-template-columns: minmax(33%, 1fr);
+  grid-template-rows: min-content repeat(auto, max-content);
+
+  @media only screen and (min-width: 900px) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 33%));
+  }
+
+  &__intro {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 3.14rem;
+    justify-self: center;
+    align-self: center;
+
+    &-header {
+      background-color: #000;
+      width: max-content;
+      padding: 1.618rem;
+      margin-bottom: 2rem;
+      font-size: 3.618rem;
+      color: $yellow-dark;
+    }
+    &-text {
+      width: content;
+      font-size: 2rem;
+      background-color: $yellow-dark;
+      padding: 1.618rem;
+
+      &--a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// individual projects
+.project {
+  // FUNCTIONALITY
+  height: 52rem;
+  margin: 5rem 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: minmax(23rem, max-content) minmax(47%, 1fr);
+  justify-content: center;
+
+  &__side {
+    grid-row: 1 / -1;
+    position: relative;
+    height: 52rem;
+    width: 78.6%;
+    border: 3px solid $yellow-dark;
+
+    @media only screen and (max-width: 1000px) {
+      width: 88.6%;
+    }
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: $shadow-light;
+    margin: 0 auto;
+
+    &--front {
+      background-color: #fff;
+    }
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      box-shadow: $shadow-hover;
+    }
+    &:active {
+      transform: scale(0.95);
+      box-shadow: $shadow-active;
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    grid-row: 1 / 2;
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: url(../img/code-project-card.jpg);
+    }
+  }
+
+  &__heading {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, -21%);
+    width: max-content;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-size: 2rem;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($yellow-light, 0.85),
+        rgba($yellow-dark, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    grid-row: 2 / 3;
+    align-self: center;
+    height: 55%;
+    padding: 2%;
+    &-text {
+      padding: 8%;
+      font-size: 2.13rem;
+      line-height: 1.5;
+      height: 100%;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+  }
+}

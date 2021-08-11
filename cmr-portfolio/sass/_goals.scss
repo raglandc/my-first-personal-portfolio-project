@@ -1,0 +1,61 @@
+.goals {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  padding: 4rem;
+  display: grid;
+  grid-template-rows:
+    minmax(0.3fr, max-content) minmax(1fr, max-content) minmax(
+      0.3fr,
+      max-content
+    )
+    minmax(1fr, max-content);
+  font-size: 1.27rem;
+  align-items: center;
+
+  @media only screen and (min-width: 900px) {
+    grid-column: 3 / 16;
+  }
+
+  &__header {
+    grid-row: 1 / 2;
+    font-size: 3.14rem;
+    height: max-content;
+  }
+  &__text {
+    grid-row: 2 / 3;
+    line-height: 1.5;
+    font-size: 2rem;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  &__instructions {
+    grid-row: 3 / 4;
+    text-align: center;
+    font-size: 1.618rem;
+    padding: 2rem;
+    background-color: #fff;
+    align-self: start;
+    justify-self: center;
+    width: max-content;
+  }
+  &__roadmap {
+    grid-row: 4 / 5;
+    align-self: start;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.68rem;
+    transition: all 168ms ease-in-out;
+
+    &--slides {
+      padding: 2rem;
+
+      &:hover {
+        transform: scale(1.13);
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+.contact {
+  grid-row: 6 / 7;
+  grid-column: 1 / -1;
+  color: $yellow-dark;
+
+  @media only screen and (min-width: 700px) {
+    grid-column: 3 / 16;
+  }
+
+  display: grid;
+  grid-template-rows:
+    minmax(0.3fr, max-content) repeat(2, minmax(1fr, max-content))
+    minmax(0.3, min-content);
+  grid-template-columns: repeat(auto-fit, minmax(100%, max-content));
+
+  @media only screen and (min-width: 1200px) {
+    grid-template-rows: minmax(0.3fr, max-content) minmax(1fr, max-content) minmax(
+        0.5,
+        min-content
+      );
+    grid-template-columns: repeat(auto-fit, minmax(50%, max-content));
+  }
+
+  &__header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    color: $yellow-dark;
+    margin: 5rem 0 0 0;
+    padding: 4.618rem;
+    font-size: 3.618rem;
+    justify-self: center;
+
+    @media only screen and (min-width: 1200px) {
+      grid-column: 1 / 2;
+    }
+  }
+  &__form {
+    width: 78.6%;
+    grid-row: 2 / 3;
+    border: 3px solid $yellow-dark;
+    padding: 2rem 0 3rem 2rem;
+    margin: 3rem auto;
+
+    @media only screen and (min-width: 1100px) {
+      width: 61.8%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      grid-column: 1 / 2;
+      width: 88.6%;
+    }
+
+    &-input {
+      color: $yellow-light;
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      border-radius: 0.2rem;
+      background-color: transparent;
+      border: 1px solid $yellow-dark;
+      width: 90%;
+      display: block;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 3px solid $yellow-dark;
+        background-color: rgba(#fff, 0.0886);
+      }
+
+      &:focus:invalid {
+        border-bottom: 3px solid rgb(255, 129, 129);
+      }
+
+      &::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.322);
+      }
+    }
+
+    &-label {
+      letter-spacing: 3px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-left: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1.618rem;
+      display: block;
+      transition: all 0.3s;
+    }
+    &-input:placeholder-shown + &-label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+    &-btn {
+      margin: 6.18rem 0 0 0;
+      font-size: 1.618rem;
+      width: 15rem;
+      height: 5rem;
+      border-radius: 3rem;
+      border: 1px solid $yellow-dark;
+      background-color: transparent;
+      text-decoration: none;
+      color: $yellow-dark;
+      transition: all 382ms;
+
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: $yellow-dark;
+        transform: scale(1.13);
+      }
+      &:active {
+        transform: scale(0.886);
+      }
+    }
+  }
+  &__outro {
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+
+    @media only screen and (min-width: 1100px) {
+      width: 61.8%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3;
+    }
+
+    &-logo {
+      width: min-content;
+      margin-bottom: 5rem;
+      fill: $yellow-dark;
+      font-size: 13rem;
+      margin: 0;
+    }
+    &-header {
+      align-self: start;
+      margin: 5rem auto 3rem auto;
+      font-size: 3rem;
+    }
+    &-text {
+      padding: 2rem 3rem;
+      text-indent: 1rem;
+      font-size: 1.618rem;
+      line-height: 1.618;
+      opacity: 0.886;
+    }
+  }
+  &__footer {
+    border-top: 2px solid $yellow-dark;
+    margin: 0 1.618rem;
+    grid-row: 4 / 5;
+    margin-bottom: 3rem;
+
+    @media only screen and (min-width: 1200px) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-evenly;
+      align-self: center;
+      margin: 3rem 0;
+
+      &--link {
+        text-decoration: none;
+        color: rgba($yellow-dark, 0.786);
+        font-size: 3.618rem;
+        transition: all 100ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.13);
+          color: rgba($yellow-dark, 1);
+        }
+      }
+    }
+    &-copyright {
+      text-align: center;
+      color: rgba($yellow-dark, 0.786);
+      padding: 0 3rem;
+    }
+  }
+}

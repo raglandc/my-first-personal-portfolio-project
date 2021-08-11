@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Display</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Chris Ragland's JS Assignments</h1>
+      <div>
+        <a id="navControl"><i class="fa fa-bars"></i></a>
+        <nav>
+          <a href="../index.html">CMR Port</a>
+          <a href="#stringAssignment">String</a>
+          <a href="#objectAssignment">Object</a>
+          <a href="#loopAssignment">Loop</a>
+          <a href="#numbersAssignment">Numbers</a>
+          <a href="#formAssignment">Form Val</a>
+          <a href="#cookiesAssignment">Cookies</a>
+          <a href="#pluginsAssignment">Plugins</a>
+          <a href="#imageGallery">Gallery</a>
+          <a href="#canvasAssignment">Canvas</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="stringAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">String Mad Lib</h2>
+        <div class="accordian">
+          <div id="madLibDisplay"></div>
+          <form id="madLibForm" action="" id="form1">
+            <input
+              type="text"
+              id="adjective1"
+              name="adjective1"
+              placeholder="adjective"
+            />
+            <input type="text" id="noun1" name="noun1" placeholder="noun" />
+            <input
+              type="text"
+              id="adjective2"
+              name="adjective2"
+              placeholder="adjective"
+            />
+            <input type="text" id="place" name="place" placeholder="place" />
+            <input
+              type="text"
+              id="adjective3"
+              name="adjective3"
+              placeholder="adjective"
+            />
+            <input
+              type="text"
+              id="adjective4"
+              name="adjective4"
+              placeholder="adjective"
+            />
+            <input
+              type="text"
+              id="vehicle"
+              name="vehicle"
+              placeholder="vehicle"
+            />
+            <input
+              type="text"
+              id="adjective5"
+              name="adjective5"
+              placeholder="adjective"
+            />
+            <input
+              type="text"
+              id="adjective6"
+              name="adjective6"
+              placeholder="adjective"
+            />
+            <input
+              type="text"
+              id="pNoun1"
+              name="pNoun1"
+              placeholder="plural noun"
+            />
+            <input
+              type="text"
+              id="adjective7"
+              name="adjective7"
+              placeholder="adjective"
+            />
+            <input
+              type="text"
+              id="pNoun2"
+              name="pNoun2"
+              placeholder="Plural noun (capitalize)"
+            />
+            <input
+              type="text"
+              id="pNoun3"
+              name="pNoun3"
+              placeholder="plural noun"
+            />
+            <input
+              type="text"
+              id="adjective8"
+              name="adjective8"
+              placeholder="adjective"
+            />
+            <input type="text" id="noun2" name="noun2" placeholder="noun" />
+            <input type="text" id="verb1" name="verb1" placeholder="verb" />
+            <input
+              type="text"
+              id="adjective9"
+              name="adjective9"
+              placeholder="adjective"
+            />
+            <input type="text" id="verb2" name="verb2" placeholder="verb" />
+            <input
+              type="text"
+              id="pNoun4"
+              name="pNoun4"
+              placeholder="plural noun"
+            />
+            <input type="text" id="job" name="job" placeholder="job" />
+            <input
+              type="text"
+              id="adjective10"
+              name="adjective10"
+              placeholder="adjective"
+            />
+            <input type="text" id="verb3" name="verb3" placeholder="verb" />
+            <input
+              type="text"
+              id="adjective11"
+              name="adjective11"
+              placeholder="adjective"
+            />
+
+            <input type="button" value="Submit" id="madLibBTN" />
+          </form>
+        </div>
+      </div>
+
+      <div id="objectAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Objects</h2>
+        <div class="accordian">
+          <div id="objectDisplay"></div>
+          <input id="objBTN" type="button" value="Display-Objects" />
+        </div>
+      </div>
+
+      <div id="loopAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Imperative and Declarative Loops</h2>
+        <div class="accordian">
+          <div id="loopDisplay"></div>
+          <div id="loopBTNs">
+            <input id="impBTN" type="button" value="Imperative" />
+            <input id="decBTN" type="button" value="Declarative" />
+          </div>
+        </div>
+      </div>
+
+      <div id="numbersAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Numbers</h2>
+        <div class="accordian numbersAccordian">
+          <div class="calculatorGrid">
+            <div class="calcOutput">
+              <div data-previous-operand class="perviousOperand"></div>
+              <div data-current-operand class="currentOperand"></div>
+            </div>
+            <button data-all-clear class="spanTwo">AC</button>
+            <button data-delete>DEL</button>
+            <button data-operation>/</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>*</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>-</button>
+            <button data-number>.</button>
+            <button data-number>0</button>
+            <button data-equals class="spanTwo">=</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="formAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Form Validation</h2>
+        <div class="accordian formAccordian">
+          <div class="form__container">
+            <form id="signup" class="form">
+              <h1>Sign Up</h1>
+              <div class="form-field">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  autocomplete="off"
+                />
+                <small></small>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" autocomplete="off" />
+                <small></small>
+              </div>
+              <div class="form-field">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  autocomplete="off"
+                />
+                <small></small>
+              </div>
+              <div class="form-field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  autocomplete="off"
+                />
+                <small></small>
+              </div>
+              <div class="form-field">
+                <input class="form_btn" type="submit" value="Sign Up" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="cookieAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Cookie Control</h2>
+        <div class="accordian cookieAccordian">
+          <div class="cookieContainer">
+            <div id="cookieDisplay">
+              <p id="currentCookies">Cookie will display here</p>
+            </div>
+            <div id="playground"></div>
+            <input
+              placeholder="enter a cookie name"
+              id="cookieText"
+              type="text"
+            />
+            <input
+              id="createCookieBTN"
+              class="cookieButton"
+              type="button"
+              value="Create"
+            />
+            <input
+              id="editCookieBTN"
+              class="cookieButton"
+              type="button"
+              value="Edit"
+            />
+            <input
+              id="readCookieBTN"
+              class="cookieButton"
+              type="button"
+              value="Read"
+            />
+            <input
+              id="deleteCookieBTN"
+              class="cookieButton"
+              type="button"
+              value="Delete"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="pluginAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">Plugins</h2>
+        <div class="accordian pluginAccordian">
+          <div class="pluginContainer">
+            <h3>Plugin Check</h3>
+            <div id="pluginDisplay">
+              <p id="pluginDisplay-text"></p>
+            </div>
+            <input
+              value="Hide"
+              type="button"
+              id="hidePlugins"
+              class="pluginBTN"
+            />
+            <input
+              value="Show"
+              type="button"
+              id="showPlugins"
+              class="pluginBTN"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="imageGallery" class="assignmentSeperation">
+        <h2 class="accordianControl">Image Gallery</h2>
+        <div class="accordian imageGalleryAccordian">
+          <h1 class="image-gallery-header">Image Gallery</h1>
+          <div class="gallery-search">
+            <input
+              class="gallery-searchInput"
+              type="text"
+              placeholder="Search for images"
+            />
+            <input class="gallery-searchBTN" type="button" value="search" />
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-photos-container">
+              <p class="gallery-photos-text">
+                Search for a photo and select one to get a better view.
+              </p>
+              <img loading="lazy" src="" alt="" class="gallery-photos hidden" />
+            </div>
+            <ul class="gallery-list"></ul>
+            <div class="gallery-buttons">
+              <i class="fa fa-search-plus"></i>
+              <i class="fa fa-search-minus"></i>
+              <i class="fa fa-refresh"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="canvasAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">HTML Canvas</h2>
+        <div class="accordian">
+          <canvas id="canvas" width="310" height="165">
+            This text is displayed if your browser does not support HTML5
+            Canvas.
+          </canvas>
+        </div>
+      </div>
+
+      <div id="phpAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">PHP</h2>
+        <div class="accordian">
+          <div class="APHP_accordian">
+            <form class="APHP_form" action="PHP/mail.php" method="POST">
+              <h2>Lets talk,</h2>
+              <div class="APHP_input__container">
+                <label for="name" class="APHP_input__label"> Name</label>
+                <input
+                  class="APHP_inputs"
+                  id="mail-name"
+                  type="text"
+                  name="name"
+                />
+              </div>
+              <div class="APHP_input__container">
+                <label for="email" class="APHP_input__label"> Email</label>
+                <input
+                  class="APHP_inputs"
+                  id="mail-email"
+                  type="text"
+                  name="email"
+                />
+              </div>
+              <div class="APHP_input__container">
+                <label for="message" class="APHP_input__label"> Message</label>
+                <input
+                  class="APHP_inputs"
+                  id="mail-message"
+                  type="text"
+                  name="message"
+                />
+              </div>
+              <input type="submit" value="submit" class="APHP_form__button" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="databaseAssignment" class="assignmentSeperation">
+        <h2 class="accordianControl">MySQL - SQL</h2>
+        <div class="accordian">
+          <div class="accordianDatabase">
+            <h1>Check Produce</h1>
+            <button class="databaseBTN">Get Produce Stock</button>
+            <ul class="dataContainer"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

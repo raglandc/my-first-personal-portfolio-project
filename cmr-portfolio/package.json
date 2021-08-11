@@ -1,0 +1,19 @@
+{
+  "name": "cmr-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass --watch sass/main.scss css/main.css -w",
+    "compile:sass": "node-sass sass/main.scss css/main.css",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
